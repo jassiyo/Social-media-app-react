@@ -1,4 +1,6 @@
+import CloseFriends from '../closeFriends/CloseFriends'
 import './sidebar.css'
+import {Users} from '../DummyData'
 import { RssFeed,
    PlayCircleFilledOutlined,
    Group,
@@ -50,42 +52,9 @@ const SideBar = () => {
           <button className='sidebarButton'>Show More</button>
           <hr className='sidebarHr' />
           <ul className='sidebarFriendList'>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
-            <li className='sidebarFriend'>
-              <img className='sidebarFriendImg' src='/assets/person/2.jpeg' alt=''/>
-              <span className='sidebarFriendName'>jaskirat singh</span>
-            </li>
+           {Users.map((u)=>(
+            <CloseFriends key={u.id} user={u} />
+           ))}
           </ul>
       </div>
     </div>
